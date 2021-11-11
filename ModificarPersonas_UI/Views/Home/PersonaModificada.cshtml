@@ -1,0 +1,25 @@
+﻿@using ModificarPersonas_Entities
+@{
+    clsPersona yo = ViewBag.Persona;
+}
+@{ if (yo != null)
+    {
+        <h1>Persona modificada con exito</h1>
+        <h2>
+            Hola @yo.nombre @yo.apellidos!
+        </h2>
+        <h3>Id número @yo.id</h3>
+        <div>
+            naciste en la fecha
+            <br />
+            <h3>@yo.fechaNac</h3>
+            Por lo tanto tu edad es: @yo.GetEdad()
+        </div>
+        <hr />
+        <div>
+            ¿Quieres modificar los datos?
+        </div>
+        @Html.ActionLink("Modificar datos", "Index", "Home")
+    }
+
+}

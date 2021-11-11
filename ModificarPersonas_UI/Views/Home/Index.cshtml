@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model ModificarPersonas_Entities.clsPersona
+
+
+
+@using (Html.BeginForm())
+{
+    <div>
+
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.nombre)
+        @Html.EditorFor(Model => Model.nombre)
+
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.apellidos)
+        @Html.EditorFor(Model => Model.apellidos)
+
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.telefono)
+        @Html.EditorFor(Model => Model.telefono)
+    </div>
+    <div>
+        @Html.LabelFor(Model => Model.fechaNac)
+        @Html.EditorFor(Model => Model.fechaNac)
+
+    </div>
+
+    <input type="submit" value="enviar" />
+}   @Html.ValidationSummary()
+<hr />
